@@ -15,7 +15,7 @@ def grab_order_nums(object, field)
 end
 
 def list_missing_gids(drinks_input, shopify_input)
-  missing = shopify_input.delete_if{|x| drinks_input.include?(x['Name'])}
+  missing = shopify_input.delete_if { |x| drinks_input.include?(x['Name']) }
 
   grab_order_nums(missing, 'Id').compact
 end
